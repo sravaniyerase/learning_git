@@ -1,16 +1,19 @@
-s="tenget"
-
-person1=0
-person2=len(s)-1
-while person1<person2:
-    if s[person1]==s[person2]:
-        person1+=1
-        person2-=1
+def check_palindrome(string):
+   first = 0
+   last = len(string)-1
+   isPalindrome=True
+   while(first<last):
+        if(string[first] == string[last]):
+            first=first+1
+            last=last-1
+        else:
+            isPalindrome=False
+            break
+   return isPalindrome
+ 
+string="MADAM"
+isPalindrome=check_palindrome(string)
+if(isPalindrome):
+   print("It is a palindrome ")
 else:
-    # print(s[person1], s[person2])
-    if s[person1] != s[person2]:
-        print("not a palindrome")
-        
-print('is a palindrome')
-    
-
+    print('is palindrome')
